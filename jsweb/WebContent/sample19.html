@@ -1,0 +1,42 @@
+<script type="text/javascript">
+ <!--
+  function Person(name,data){
+   this.name = name;
+   this.data = data;
+   this.total = function(){
+	var total = 0;
+	var arr = this.data;
+	for(var key in arr){
+	 total += arr[key];
+	}
+	return total;
+   }
+   this.average = function(){
+	return Math.floor(this.total() / 5);
+   }
+   this.report = function(){
+    var n = "name:" + this.name;
+	var t = "gouke:" + this.total();
+	var a = "heikin: " + this.average();
+	return n + "\n" + t + "\n" + a;
+   }
+  }
+ 
+  function UltraPerson(name,data){
+   Person.call(this,name,data);
+    this.getData = function(){
+     var arr = this.data;
+     var res = "";
+     for(var key in arr){
+      res += key + ":" + arr[key] + " ";
+     }
+     return res;
+    }
+    this.showMsg = function(){
+     alert(this.report() + "\n" + this.getData());
+    }
+   }
+   var p1 = new UltraPerson("taro",{"kokugo":98,"sansu":72,"rika":65,"syakai":89,"eigo":54});
+   p1.showMsg();
+  //-->
+ </script>
