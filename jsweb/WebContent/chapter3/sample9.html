@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html14/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>サンプル</title>
+    <script type="text/javascript">
+      <!-- 
+        var sel_radio= null;
+        
+        function doAction() {
+          var msg = null;
+          if (document.getElementById("check1").checked) {
+            msg ="あなたは成人です";
+          } else {
+            msg ="あなたは未成年です";
+          }
+          msg += "<br />";
+          if (sel_radio != null) {
+            msg += "性別は、" + sel_radio.value + "です";
+          } else {
+            msg += "性別は、不明です";
+          }
+          document.getElementById("content"),innerHTML = msg;
+        }
+        
+        function selectRadio1(obj) {
+          sel_radio = document.getElementById(obj);
+        }
+      //-->
+    </script>
+  </head>
+  <body>
+    <h1 id="title">サンプル</h1>
+    <p id="content">サンプルページです</p>
+    <input type="checkbox" id="check1" />
+    <label for="check1">成人</label>
+    <br />
+    <input type="radio" name="radio1" id="radio1"
+      value="男性" onclick="selectRadio1('radio1');" />
+    <label for="radio1">男性</label><br />
+    <input type="radio" name="radio1" id="radio2"
+      value="女性" onclick="selectRadio1('radio2');" />
+    <label for="radio2">女性</label><br />
+    <input type="button" onclick="doAction():" value="クリック"/>
+  </body>
+</html>
+    
+          
