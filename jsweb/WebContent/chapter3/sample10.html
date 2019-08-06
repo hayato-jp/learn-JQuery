@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html14/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>サンプル</title>
+    <script type="text/javascript">
+      <!--
+        function doAction() {
+          var msg = "";
+          var sel1 = document.getElementById("select1");
+          var ops = sel1.options;
+          for(var i = 0;1 < ops.length;i++) {
+            if (ops[i].selected) {
+              msg += ops[i].value + " ";
+            }
+          }
+          document.getElementById("content").innerHTML = msg;
+        }
+      //-->
+    </script>
+  </head>
+  <body>
+    <h1 id="title">サンプル</h1>
+    <p id="content">サンプルページです</p>
+    <select id="select1" size="5" multiple="multiple">
+      <option value="アジア">アジア</option>
+      <option value="アメリカ">アメリカ</option>
+      <option value="アフリカ">アフリカ</option>
+      <option value="ヨーロッパ">ヨーロッパ</option>
+      <option value="オセアニア">オセアニア</option>
+    </select>
+    <input type="button" onclick="doAction()" value="クリック" />
+  </body>
+</html>
+      
