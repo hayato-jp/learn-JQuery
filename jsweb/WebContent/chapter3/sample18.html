@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html14/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>サンプル</title>
+    <style type="text/css">
+      #content {
+        position: absolute;
+        background: #ff6600;
+        width: 250px;
+        height: 50px;
+      }
+    </style>
+    <script type="text/javascript">
+      <!--  
+        var count = 0;
+        
+        function doAction(event) {
+          var obj = document.createElement("div");
+          obj.style.background = "#FFAA00";
+          obj.innerHTML = "No," + count++;
+          if (obj.addEventListener != undefined) {
+            obj.addEventListener("click",click,false);
+          } else {
+            if (obj.attachEvent) {
+              obj.attachEvent("onclick",click);
+            }
+          }
+          document.body.appendChild(obj);
+        }
+        
+        function click(event) {
+          var obj = null;
+          if (event.target =! undefined) {
+            obj = event.target;
+          } else {
+            obj = event.srcElement;
+          }
+            obj.style.background = "red";
+            obj.innerHTML = "クリックしました";
+          }
+      //-->
+    </script>
+  </head>
+  <body>
+    <h1 id = "title">サンプル</h1>
+    <br /><br />
+    <input type = "button" onclick="doAction();" value = "クリック " />
+  </body>
+</html>
+        
+        
