@@ -1,0 +1,29 @@
+<script type="text/javascript">
+ <!--
+  function Person(name,data){
+   this.name = name;
+   this.data = data;
+  }
+  
+  function PersonUtil(){}
+  PersonUtil.total = function(arr){
+   var total = 0;
+   for(var key in arr){
+    total += arr[key]
+   }
+   return total;
+  }
+  PersonUtil.average = function(arr){
+   return Math.floor(PersonUtil.total(arr) / 5);
+  }
+  PersonUtil.report = function(p){
+   var n = "名前:" + p.name;
+   var t = "合計:" + PersonUtil.total(p.data);
+   var a = "平均:" + PersonUtil.average(p.data);
+   return n + "\n" + t + "\n" + a;
+  }
+  
+   var p1 = new Person("taro",{"kokugo":98,"sansu":72,"rika":65,"syakai":89,"eigo":54});
+   alert(PersonUtil.report(p1));
+  //-->
+ </script>

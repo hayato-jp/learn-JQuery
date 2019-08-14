@@ -1,0 +1,21 @@
+<script type="text/javascript">
+ <!-- 
+  var val = "a";
+  try {
+   alert(getCalc(val));
+  }catch(e){
+   alert(e.message);
+  }
+  
+  function getCalc(n){
+   if (isNaN(n)){
+    throw new Error("数字ではありません");
+   }
+   var res = 0;
+   for(var i = 0;i < n;i++){
+    res += i;
+   }
+   return res;
+  }
+ //-->
+</script>

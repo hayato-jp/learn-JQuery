@@ -1,0 +1,26 @@
+<script type="text/javascript">
+ <!--
+  var person = new Array();
+  person.name = "山田太郎";
+  person.date = {"kokugo":98,"sansu":72,"rika":65,"syakai":89};
+  person.total = function(){
+   var total = 0;
+   var arr = person.date;
+   for(var key in arr){
+    total += arr[key];
+   }
+   return total;
+  }
+  person.average = function(){
+   return Math.floor(person.total() / 5);
+  }
+  person.report = function(){
+   var n = "名前:" + person.name;
+   var t = "合計:" + person.total();
+   var a = "平均:" + person.average();
+   return n + "¥n" + t + "¥n" + a;
+  }
+   
+  alert(person.report());
+ //-->
+</script>
