@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html14/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>サンプル</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+      <!--
+        function doAction() {
+          var res= "";
+          var val= $("#sel option:selected").each(function() {
+            res += $(this).val() + "<br />";
+          });
+          $("#msg").html(res);
+        }
+      //-->
+    </script>
+  </head>
+  <body>
+    <h1 id="title">サンプル</h1>
+    <p id="msg">ボタンをクリックしてください</p>
+    <br /><br />
+    <select id="sel" multiple="multiple">
+      <option value="Windows">Windows</option>
+      <option value="Linux">Linux</option>
+      <option value="android">android</option>
+      <option value="Chrome">Chrome</option>
+      <option value="Mac OS">Mac OS</option>
+    </select><br />
+    <input type="button" onclick="doAction()" value="クリック" />
+  </body>
+</html>
