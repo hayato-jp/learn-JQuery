@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html14/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>サンプル</title>
+    <script type="text/javascript">
+      <!--  
+        function createHttpRequest() {
+          var httplist = [
+            function() { return new XMLHttpRequest(); },
+            function() { return new ActiveXObject("Msxml12.XMLHTTP"); },
+            function() { return new ActiveXObject("Microsoft.XMLHTTP"); }
+          ];
+          for(var i = 0;i < httplist.length; i++) {
+            try {
+              var http = httplist[i]();
+              if (http != null){ return http; }
+            } catch(e){ continue; }
+          }
+          return null;
+        }
+        
+        function doAction() {
+          var request = createHttpRequest();
+          if (request == null){
+            alert("HttpRequestが取得できませんでした");
+            return;
+          }
+          alert("非同期通信を開始します");
+          request.open("GET","./mydata.txt",true);
+          request.setRequestHeader("User-Agent","XMLHttpRequest");
+          request.onreadystatechange = function() {
+            if (request.readyState == 4 && request.status == 200){
+              callback(request);
+            }
+          }
+          request.send();
+        }
+          
+        function callback(request) {
+          var obj = document.getElementById("msg");
+          obj.innerHTML = request.responseText;
+        }
+      //-->
+    </script>
+  </head>
+  <body>
+    <h1 id ="title">サンプル</h1>
+    <p id = "msg"></p>
+    <br /><br />
+    <input type="button" onclick="doAction()" value="クリック" />
+  </body>
+</html>

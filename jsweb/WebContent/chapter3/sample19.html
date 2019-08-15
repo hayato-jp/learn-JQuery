@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html14/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>サンプル</title>
+    <style type="text/css">
+      #back {
+        background: #FFAA66;
+        position: absolute;
+        left: 100p; 
+        top: 100px;
+        width: 300px;
+        height: 300px;
+      }
+      #front {
+        background: #FF0000;
+        position: absolute;
+        left: 250px;
+        top: 250px;
+        width: 20px;
+        height: 20px;
+      }
+    </style>
+    <script type="text/javascript">
+     <!-- 
+        var dx = 0;
+        var dy = 0;
+        var x = 150;
+        var y = 150;
+        var timer = setInterval(doAction,100);
+      
+        function setMove() {
+          dx = Math.floor(Math.random() * 21 - 10);
+          dy = Math.floor(Math.random() * 21 - 10);
+        }
+      
+        function doAction() {
+          if (x < 0) dx *= -1;
+          if (x > 280) dx *= -1;
+          if (y < 0) dy *= -1;  
+          if (y > 280) dy *= -1;
+          x += dx;
+          y += dy;
+          var front = document.getElementById("front");
+          front.style.left = x + "px";   
+          front.style.top = y + "px";
+        }
+      //-->
+    </script>
+  </head>
+  <body>
+    <h1 id="title">サンプル</h1>
+    <div id="back" onclick="setMove();">
+      <div id="front"></div>
+    </div>
+  </body>
+</html>
