@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html14/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>サンプル</title>
+    <style type="text/css">
+    　.msg {
+      background-color: #FFAAAA;
+      margin: 5px;
+      }
+      .msg_end {
+      background-color: #FF6666;
+      }
+    </style>
+    <script src="js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript">
+      <!--
+        $(document).ready(function() {
+          $(".msg").live("mouseover",in_it);
+          $(".msg").live("mouseout",out_it);
+          $(".msg").live("click",count_it);
+          $("#btn").bind("mouseover",doAction);
+
+          //クリック処理
+          function count_it(event) {
+            var n = $(this).data("counter");
+            var msg = $(this).data("msg");
+            n++;
+            $(this).text("クリック数" + n + ":" + msg);
+            $(this).data("counter",n);
+          }
+          //マウスポインタが入った処理
+          function in_it(event) {
+            $(this).addClass("msg_in");
+          }
+          //マウスポイントが出た処理
+          function out_it(event) {
+            $(this).removeClass("msg_in");
+          }
+          //ボタンクリックの処理
+          function doAction(event) {
+            var str = $("#input").val();
+              var obj = $("<div>" + str + "<div>");
+              obj.addClass("msg");
+              obj.data("counter",0);
+              obj.data("msg",str);
+              $("#msgs").append(obj);
+          }
+        });
+      //-->
+    </script>
+  </head>
+  <body>
+    <h1 id="title">サンプル</h1>
+    <div id="msgs"></div>
+    <br /><br />
+    <input type="text" id="input" />
+    <input type="button" id="btn" value="クリック" />
+  </body>
+</html>
