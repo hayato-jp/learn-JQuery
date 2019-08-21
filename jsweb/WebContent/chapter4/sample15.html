@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html14/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>サンプル</title>
+    <style type="text/css">
+    　.msg {
+      background-color: #FFAAAA;
+      margin: 5px;
+    }
+      .hovermsg {
+      background-color: #FFAAAA;
+    }
+    </style>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+      <!--
+        $(document).ready(function() {
+          $("#msg1").data("flg",false);
+          $("#msg0").click(
+            function(event) {
+              var f = $("#msg1").data("flg");
+              f = !f;
+              if (f) {
+                $("#msg1").bind("click",doclick);
+                $("#msg1").hover(m_in,m_out);
+              } else {
+                $("#msg1").unbind("click");
+                $("#msg1").unbind("hover");
+              }
+              $("#msg1").data("flg",f);
+            }
+          );
+        });
+        function doclick(event) {
+          alert("クリックしました");
+        }
+        function m_in(event) {
+          $(this).addClass("hovermsg");
+        }
+        function m_out(event) {
+          $(this).removeClass("hovermsg");
+        }
+      //-->
+    </script>
+  </head>
+  <body>
+    <h1 id="title">サンプル</h1>
+    <div id="msg0" class="msg">メッセージ1</div>
+    <div id="msg1" class="msg">メッセージ2</div>
+    <br /><br />
+  </body>
+</html>
