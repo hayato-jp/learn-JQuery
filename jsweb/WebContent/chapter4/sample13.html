@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html14/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>サンプル</title>
+    <style type="text/css">
+      #msg {
+        background-color: #FFAAAA
+      }
+    </style>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+      <!--
+        var timer = null;
+        function change() {
+          var n = $("#msg").data("count");
+          if (data == null) {n = 0;}
+          var data = $("#msg").data("info");
+          if (++n == data.length) {n = 0;}
+          $("#msg").text(data[n]);
+          $("#msg").data("count",n);
+        }
+        function doAction() {
+          var data = $("#msg").data("info");
+          if (data == null) {
+            data = new Array();
+            timer = setInterval(change,3000);
+          }
+          data.push($("input").val());
+          $("#msg").data("info",data);
+        }
+      //-->
+    </script>
+  </head>
+  <body>
+    <h1 id="title">サンプル</h1>
+    <div id="msg">メッセージ</div>
+    <br /><br />
+    <input type="text" id="input" /><br />
+    <input type="button" onclick="doAction()" value="クリック" />
+  </body>
+</html>

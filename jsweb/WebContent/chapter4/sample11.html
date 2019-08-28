@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html14/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>サンプル</title>
+    <style type="text/css">
+      .inner {
+        border-style: solid;
+        border-width: 5px;
+        border-color: #FFAAAA;
+        padding: 5px;
+      }
+    </style>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+      <!--
+        function doAction() {
+          var obj = $("<div class=\"inner\"></div>");
+          $(".msg").wrapAll(obj);
+        }
+      //-->
+    </script>
+  </head>
+  <body>
+    <h1 id="title">サンプル</h1>
+    <div id="msg1" class="msg">メッセージ1</div>
+    <div id="msg2" class="msg">メッセージ2</div>
+    <div id="msg3" class="msg">メッセージ3</div>
+    <br /><br />
+    <input type="button" onclick="doAction()" value="クリック" />
+  </body>
+</html>
