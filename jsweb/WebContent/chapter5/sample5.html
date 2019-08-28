@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html14/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>サンプル</title>
+    <style>
+      .msg {
+        margin: 5px;
+        padding: 5px;
+        border: 10px double #AAAAAA;
+        width: 500px;
+        font-size:24pt;
+        background-color: #FF6666
+      }
+    </style>
+    <script src="js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript">
+      <!--
+        $(document).ready(function() {
+          $("#msg").data("flg",false);
+          $("#msg").click(doAction);
+        });
+
+        function doAction() {
+          var flg = $("#msg").data("flg");
+          if (flg) {
+            var param = {width:"500px",fontSize:"24pt",borderWidth:"10px",opacity:1.0}
+          } else {
+            var param = {width:"100px",fontSize:"8pt",borderWidth:"3px",opacity:0.5}
+          }
+          $("#msg").animate(param,3000);
+          $("#msg").data("flg",!flg);
+        }
+      //-->
+    </script>
+  </head>
+  <body>
+    <h1 id="title">サンプル</h1>
+    <div id="msg" class="msg" >メッセージ</div>
+  </body>
+</html>

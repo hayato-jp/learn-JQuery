@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html14/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>サンプル</title>
+    <style type="text/css">
+      .msg {
+        margin: 5px;
+        padding: 5px;
+        border: 3px double #AAAAAA;
+      }
+      .sel {
+        font-weight: #FFCCCC;
+      }
+    </style>
+    <script src="js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript">
+      <!--
+        $(document).ready(function() {
+          $("#btn").click(doAction);
+          $("#td").hover(mouseIn,mouseOut);
+        });
+
+        function mouseIn(event) {
+          $("#td").find("span").css("fontWeight","bold");
+        }
+        function mouseOut(event) {
+          $("#td").find("span").css("fontWeight","normal");
+        }
+
+        function doAction(event) {
+          var str = $("#area").val();
+          str = str.replace(/[0-9]+/g,"<span>$&</span>");
+          $("#td").html(str);
+        }
+      //-->
+    </script>
+  </head>
+  <body>
+    <h1 id="title">サンプル</h1>
+    <table border="1" id="table0">
+      <tr><td id="td">コンテンツ</td></tr>
+    </table>
+
+    <hr />
+    <textarea id="area" rows="5" cols="40"></textarea>
+    <input type="button" id="btn" value="クリック" />
+  </body>
+</html>
