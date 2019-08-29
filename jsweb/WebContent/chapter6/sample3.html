@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html14/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>サンプル</title>
+    <style type="text/css">
+      .msg {
+        border: 1px double #AAAAAA;
+        width: 100px;
+        height: 100px;
+        background-color: #FFAAAA;
+      }
+      .drop {
+        border: 3px double #AAAAAA;
+        width: 100px;
+        height: 100px;
+        background-color: #00ff00;
+      }
+      .dropped {
+        background-color: #009900;
+      }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <link id="link" type="text/css" href="css/smoothness/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" />
+    <script type="text/javascript">
+      <!--
+        $(document).ready(function() {
+          $(".msg").draggable();
+          $("#drop0").droppable(
+            { accept: '.msg',
+              hoverClass: 'dropped',
+              drop:function(event,ui) {
+                $(this).text("dropped:" + ui.draggable.attr("id"));
+              }
+            }
+          );
+        });
+      //-->
+    </script>
+  </head>
+  <body>
+    <h1 id="title">サンプル</h1>
+    <div id="msg0" class="msg">メッセージ</div>
+    <div id="msg1" class="msg">メッセージ2</div>
+    <div id="msg2" class="msg">メッセージ3</div>
+    <hr />
+    <div id="drop0" class="drop">ドロップ</div>
+  </body>
+</html>
