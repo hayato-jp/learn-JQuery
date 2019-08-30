@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html14/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>サンプル</title>
+    <style type="text/css">
+      #bar {
+        width: 200px;
+      }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <link id="link" type="text/css" href="css/smoothness/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" />
+    <script type="text/javascript">
+      <!--
+        $(document).ready(function() {
+          $("#bar").progressbar({
+            min: 0,
+            max: 100,
+            value: 90,
+          });
+        });
+
+        function doAction() {
+          $("#bar").progressbar("value",$("#input").val());
+        }
+      //-->
+    </script>
+  </head>
+  <body>
+    <div id="bar"></div>
+    <hr />
+    <input type="text" id="input" />
+    <input type="button" id="btn" onclick="doAction()" value="クリック" />
+  </body>
+</html>
