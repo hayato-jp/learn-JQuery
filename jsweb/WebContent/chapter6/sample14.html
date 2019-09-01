@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html14/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>サンプル</title>
+    <style type="text/css">
+      #dlog {
+        width: 300px;
+        height: 200px;
+        display: none;
+      }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <link type="text/css" href="css/smoothness/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
+    <script type="text/javascript">
+      <!--
+        var count = 0;
+
+        function doAction(){
+          var obj = $(document.createElement("div"));
+          obj.append($(document.createElement("div")).text("新しいログ"));
+          $(document).append(obj);
+          obj.dialog({title: "No," + count++});
+        }
+      //-->
+    </script>
+  </head>
+  <body>
+    <div id="msg">ボタンをクリック</div>
+    <div id="dlog">テキストを入力ください
+      <input type="text" id="input" size="30">
+    </div>
+    <input type="button" id="btn" onclick="doAction()" value="クリック" />
+  </body>
+</html>
